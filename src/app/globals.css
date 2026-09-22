@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Instrument Serif ── */
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/instrument-serif-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/instrument-serif-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── JetBrains Mono (individual weights) ── */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --canvas: #FCFCFA;
+    --canvas-secondary: #F5F5F0;
+    --canvas-elevated: rgba(255, 255, 255, 0.85);
+    --ink: #1A1A18;
+    --ink-secondary: #3A3A35;
+    --ink-body: #555550;
+    --ink-muted: #777770;
+    --ink-faint: #9C9C94;
+    --amber: #C47D1E;
+    --amber-glow: rgba(196, 125, 30, 0.35);
+    --amber-wash: rgba(196, 125, 30, 0.12);
+    --border: #E5E5E0;
+    --border-spine: #D1D1CB;
+    --emerald: #10B981;
+    --violation: #DC2626;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* ── Selection ── */
+  ::selection {
+    background-color: var(--amber-wash);
+    color: var(--ink);
+  }
+
+  /* ── Focus ── */
+  :focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+  }
+
+  /* ── Reduced Motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ── Editorial Container ── */
+  .container-editorial {
+    @apply max-w-[1080px] mx-auto;
+    padding-inline: clamp(24px, 4.5vw, 64px);
+  }
+
+  /* ── Spine Dashed Line ── */
+  .spine-dashed {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #D1D1CB 0px,
+      #D1D1CB 4px,
+      transparent 4px,
+      transparent 10px
+    );
+  }
+
+  /* ── Line Mask (for text reveals) ── */
+  .line-mask {
+    overflow: hidden;
+    display: block;
+  }
+
+  /* ── Terminal Dark Block ── */
+  .terminal-block {
+    @apply bg-ink font-mono text-sm rounded-none p-6 lg:p-8;
+    color: #E5E5E0;
+  }
+
+  /* ── Animated Divider ── */
+  .divider-animated {
+    @apply w-full h-px;
+    background: var(--border);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .divider-animated.in-view {
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .tracking-eyebrow {
+    letter-spacing: 0.15em;
+  }
+
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
