@@ -52,7 +52,7 @@ http.route({
       // Find the case matching this inbox or recipient
       const allCases = await ctx.runQuery(api.cases.listCases, {});
       const matchedCase = allCases.find(
-        (c) => (inboxId && c.agentMailInboxId === inboxId) || (c.agentMailAddress && recipient.includes(c.agentMailAddress))
+        (c: any) => (inboxId && c.agentMailInboxId === inboxId) || (c.agentMailAddress && recipient.includes(c.agentMailAddress))
       );
 
       if (!matchedCase) {

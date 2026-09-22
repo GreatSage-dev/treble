@@ -9,13 +9,13 @@ export const provisionAndDispatchDemand = action({
     caseId: v.id("cases"),
     recipientEmail: v.optional(v.string()),
   },
-  handler: async (ctx, args) => {
-    const caseDoc = await ctx.runQuery(api.cases.getCase, { id: args.caseId });
+  handler: async (ctx, args): Promise<any> => {
+    const caseDoc: any = await ctx.runQuery(api.cases.getCase, { id: args.caseId });
     if (!caseDoc) {
       throw new Error(`Case not found: ${args.caseId}`);
     }
 
-    const deductions = await ctx.runQuery(api.deductions.listDeductions, { caseId: args.caseId });
+    const deductions: any[] = await ctx.runQuery(api.deductions.listDeductions, { caseId: args.caseId });
     const apiKey = process.env.AGENTMAIL_API_KEY;
 
     if (!apiKey) {
@@ -57,7 +57,7 @@ export const provisionAndDispatchDemand = action({
     });
 
     // 2. COMPILE FORMAL STATUTORY DEMAND LETTER
-    const recipient =
+    const recipient: string =
       args.recipientEmail ||
       caseDoc.entityResolution?.primaryNoticeEmail ||
       "oakland-management@greystar-lyric.com";
@@ -71,7 +71,7 @@ export const provisionAndDispatchDemand = action({
 
     const deductionsSummary = deductions
       .map(
-        (d, idx) =>
+        (d: any, idx: number) =>
           `${idx + 1}. ${d.description} - Invoiced: $${d.claimedAmount.toFixed(2)} | Allowable: $${d.allowableAmount.toFixed(2)}\n` +
           `   Finding: ${d.statutoryVerdict}\n` +
           `   Statutory Citation: ${d.statutoryCitation}\n` +

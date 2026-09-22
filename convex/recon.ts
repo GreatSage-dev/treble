@@ -1,34 +1,9 @@
 "use node";
 
-import { action, mutation } from "./_generated/server";
+import { action } from "./_generated/server";
 import { v } from "convex/values";
 import { api } from "./_generated/api";
 import FirecrawlApp from "@mendable/firecrawl-js";
-
-export const recordEvidence = mutation({
-  args: {
-    caseId: v.id("cases"),
-    evidenceType: v.union(
-      v.literal("LISTING_RECON"),
-      v.literal("SOS_REGISTRY"),
-      v.literal("CSLB_LICENSE"),
-      v.literal("MUNICIPAL_VIOLATIONS")
-    ),
-    title: v.string(),
-    sourceUrl: v.string(),
-    extractedData: v.string(),
-  },
-  handler: async (ctx, args) => {
-    return await ctx.db.insert("evidence", {
-      caseId: args.caseId,
-      evidenceType: args.evidenceType,
-      title: args.title,
-      sourceUrl: args.sourceUrl,
-      extractedData: args.extractedData,
-      timestamp: new Date().toISOString(),
-    });
-  },
-});
 
 export const performRecon = action({
   args: {
@@ -57,7 +32,7 @@ export const performRecon = action({
       const scrapeResult = await firecrawl.scrapeUrl(targetUrl, {
         formats: ["json"],
         jsonOptions: {
-          schema: {
+          schema: ({
             type: "object",
             properties: {
               propertyName: { type: "string" },
@@ -69,7 +44,7 @@ export const performRecon = action({
               photosShowOriginalPaintAndCarpet: { type: "boolean" },
             },
             required: ["propertyName", "isListed"],
-          },
+          } as any),
         },
       });
 
@@ -100,7 +75,7 @@ export const performRecon = action({
       };
     }
 
-    await ctx.runMutation(api.recon.recordEvidence, {
+    await ctx.runMutation(api.evidence.recordEvidence, {
       caseId: args.caseId,
       evidenceType: "LISTING_RECON",
       title: "Active Rental Listing: Unit Re-listed 3 Days Post Move-Out Without Repairs",
@@ -120,7 +95,7 @@ export const performRecon = action({
       primaryNoticeEmail: "oakland-management@greystar-lyric.com",
     };
 
-    await ctx.runMutation(api.recon.recordEvidence, {
+    await ctx.runMutation(api.evidence.recordEvidence, {
       caseId: args.caseId,
       evidenceType: "SOS_REGISTRY",
       title: "California Secretary of State Entity Filing & Registered Agent Record",
@@ -143,7 +118,7 @@ export const performRecon = action({
       statutoryViolation: "Cal. Bus. & Prof. Code § 7031 bars collection for contracting > $500",
     };
 
-    await ctx.runMutation(api.recon.recordEvidence, {
+    await ctx.runMutation(api.evidence.recordEvidence, {
       caseId: args.caseId,
       evidenceType: "CSLB_LICENSE",
       title: "CSLB License Search: QuickFix Maintenance Services (Unlicensed Contractor)",
