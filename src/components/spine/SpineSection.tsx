@@ -65,16 +65,8 @@ function MilestoneCard({ milestone }: { milestone: Milestone }) {
   const inView = useInView(ref, { once: false, margin: '-20% 0px -20% 0px' });
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0.35, y: 12, scale: 0.98 }}
-      animate={
-        inView
-          ? { opacity: 1, y: 0, scale: 1 }
-          : { opacity: 0.35, y: 12, scale: 0.98 }
-      }
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`bg-white/70 backdrop-blur-sm p-6 lg:p-8 rounded-sm transition-colors duration-500 ${inView ? 'border border-[#C47D1E]' : 'border border-[#E5E5E0]'}`}
+    <div
+      className="bg-white/80 backdrop-blur-sm p-6 lg:p-8 rounded-sm border border-[#E5E5E0] hover:border-[#C47D1E] transition-all duration-300 shadow-sm"
     >
       <span className="inline-block font-mono text-[11px] font-semibold tracking-[0.15em] uppercase text-[#C47D1E]">
         {milestone.number} // {milestone.eyebrow}
@@ -89,7 +81,7 @@ function MilestoneCard({ milestone }: { milestone: Milestone }) {
         <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
         {milestone.telemetry}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
