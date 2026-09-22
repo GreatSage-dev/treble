@@ -10,13 +10,23 @@
 
 Every year, 44 million American renter households surrender \$3.2 Billion in unlawfully withheld security deposits. Corporate landlords systematically invoice departing tenants \$800 for 4-year-old paint and \$550 for routine turnover cleaning, banking on the fact that 95% of tenants cannot afford an attorney.
 
-**TREBLE** is an autonomous statutory enforcement engine. When a tenant forwards a move-out deduction notice, **Convex** locks the case into an ACID state machine; **Firecrawl** forensically scrapes the active rental listings and corporate Secretary of State records to resolve the true deed-holding LLC and unmask whether the unit was re-listed without repairs; **OpenAI** cross-examines deductions against California AB 2801 (mandatory before/after photo requirements), DRE 2-year paint useful-life benchmarks, and Cal. Bus. & Prof. Code § 7031 contractor licensing laws; and **AgentMail** provisions a dedicated legal communications conduit to serve a formal 14-day statutory cure notice with pre-emptive credit reporting immunity under the California Rosenthal Act.
+**TREBLE** is an autonomous statutory enforcement engine built for the **Convex "All Gas" Hackathon**. It turns a predatory \$1,650 move-out deduction into a \$6,450 treble exposure claim in under 60 seconds.
 
 ---
 
-## 2. THE DREY-STANDARD TERMINAL RECEIPT (SCREEN 1)
+## 2. INTERACTIVE VERIFICATION FOR JUDGES
 
-Execute this standalone deterministic verification command in any terminal. It verifies the statutory audit, the 2025 AB 2801 photographic mandate, the DRE 24-month paint useful life proration, and the negative-space security suite in `< 50ms` with zero external dependencies:
+Judges can verify TREBLE through two distinct, sub-second paths:
+
+### Path A: Live Interactive Web Playground (`/judges`)
+Open **[`/judges`](http://localhost:3000/judges)** on the live app to test TREBLE's 4 deterministic production guards:
+1. **AB 2801 Photo Defect:** Missing before/after photos $\rightarrow$ \$800 repaint liquidated to \$0.00.
+2. **DRE Paint Useful Life:** Tenancy (48mo) > Benchmark (24mo) $\rightarrow$ 100% normal wear and tear.
+3. **Unlicensed Contractor:** Billing > \$500 without active CSLB license $\rightarrow$ Voided under Cal. Bus. & Prof. Code § 7031.
+4. **Granberry 21-Day Forfeiture:** Notice mailed on Day 24 > 21 statutory days $\rightarrow$ Mandatory full \$2,200 deposit refund.
+
+### Path B: The Standalone Terminal Drey-Standard Receipt (< 25ms)
+Execute this standalone deterministic verification command in any terminal with zero external dependencies:
 
 ```bash
 $ python run_receipt.py
