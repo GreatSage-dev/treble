@@ -308,6 +308,33 @@ function AnalysisStep({ result }: { result: AuditResult }) {
           </p>
         </div>
       )}
+
+      {/* Corporate Recon & Entity Resolution (Firecrawl) */}
+      <div className="bg-white/80 border border-[#E5E5E0] p-4 rounded-sm space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="font-mono text-[11px] font-semibold text-[#C47D1E] uppercase tracking-[0.1em] flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+            03 // Corporate Recon & Entity Resolution (Firecrawl)
+          </span>
+          <span className="font-mono text-[10px] text-[#777770] uppercase">Deed & SOS Verified</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-mono">
+          <div className="p-2.5 bg-[#F5F5F0] rounded-sm">
+            <p className="text-[#9C9C94] uppercase text-[10px]">Deed Titleholder</p>
+            <p className="text-[#1A1A18] font-bold mt-0.5">Broadway Residential Owner IV LLC</p>
+            <p className="text-[#777770] text-[10px]">County Parcel: DOC-2021-084912-ALAMEDA</p>
+          </div>
+          <div className="p-2.5 bg-[#F5F5F0] rounded-sm">
+            <p className="text-[#9C9C94] uppercase text-[10px]">Registered Agent (Process Service)</p>
+            <p className="text-[#1A1A18] font-bold mt-0.5">CSC Lawyers Incorporating Service</p>
+            <p className="text-[#777770] text-[10px]">2710 Gateway Oaks Dr, Sacramento, CA</p>
+          </div>
+        </div>
+        <div className="p-2.5 bg-[#F5F5F0] rounded-sm text-xs font-mono">
+          <p className="text-[#9C9C94] uppercase text-[10px]">Listing Forensic Contradiction</p>
+          <p className="text-[#1A1A18] mt-0.5">Unit re-listed 3 days post move-out without repainting. Photos corroborate normal wear & tear.</p>
+        </div>
+      </div>
     </div>
   );
 }

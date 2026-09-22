@@ -19,7 +19,7 @@ Every year, 44 million American renter households surrender \$3.2 Billion in unl
 Judges can verify TREBLE through two distinct, sub-second paths:
 
 ### Path A: Live Interactive Web Playground (`/judges`)
-Open **[`/judges`](http://localhost:3000/judges)** on the live app to test TREBLE's 4 deterministic production guards:
+Open **[`https://treble-tawny.vercel.app/judges`](https://treble-tawny.vercel.app/judges)** (or Edge mirror [`https://fleet-ladybug-638.convex.site/judges`](https://fleet-ladybug-638.convex.site/judges)) to test TREBLE's 4 deterministic production guards:
 1. **AB 2801 Photo Defect:** Missing before/after photos $\rightarrow$ \$800 repaint liquidated to \$0.00.
 2. **DRE Paint Useful Life:** Tenancy (48mo) > Benchmark (24mo) $\rightarrow$ 100% normal wear and tear.
 3. **Unlicensed Contractor:** Billing > \$500 without active CSLB license $\rightarrow$ Voided under Cal. Bus. & Prof. Code § 7031.

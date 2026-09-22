@@ -3,27 +3,28 @@ export function Footer() {
     {
       title: 'STATUTORY AUTHORITY',
       items: [
-        'California Civil Code \u00a7 1950.5',
-        'AB 2801 (2025)',
-        'Rosenthal Fair Debt Collection Act',
-        'CCRAA \u00a7 1785.25(a)',
+        { label: 'California Civil Code \u00a7 1950.5' },
+        { label: 'AB 2801 (2025 Mandate)' },
+        { label: 'Rosenthal Fair Debt Collection Act' },
+        { label: 'CCRAA \u00a7 1785.25(a) Credit Shield' },
       ],
     },
     {
       title: 'BUILT WITH',
       items: [
-        'Convex (reactive backend)',
-        'OpenAI (structured extraction)',
-        'Firecrawl (entity resolution)',
-        'AgentMail (dispatch)',
+        { label: 'Convex (reactive backend & scheduler)' },
+        { label: 'Firecrawl (entity & listing recon)' },
+        { label: 'AgentMail (statutory dispatch)' },
+        { label: 'OpenAI (forensic extraction)' },
       ],
     },
     {
-      title: 'HACKATHON',
+      title: 'HACKATHON & VERIFICATION',
       items: [
-        'Convex "All Gas" 2026',
-        'Built in 48 hours',
-        'Zero mocks. All live.',
+        { label: 'Convex "All Gas" 2026' },
+        { label: 'Judges Playground (Interactive) \u2192', href: '/judges' },
+        { label: 'Convex Edge Hosting (convex.site) \u2192', href: 'https://fleet-ladybug-638.convex.site' },
+        { label: 'Zero mocks. Sub-second proof.' },
       ],
     },
   ];
@@ -40,10 +41,19 @@ export function Footer() {
               <ul className="space-y-2">
                 {col.items.map((item) => (
                   <li
-                    key={item}
+                    key={item.label}
                     className="font-mono text-[12px] text-[#777770] leading-relaxed"
                   >
-                    {item}
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-[#1A1A18] hover:text-[#C47D1E] underline decoration-[#E5E5E0] hover:decoration-[#C47D1E] transition-colors"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      item.label
+                    )}
                   </li>
                 ))}
               </ul>

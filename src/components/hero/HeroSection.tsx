@@ -28,6 +28,12 @@ export function HeroSection() {
             Begin Your Audit <span aria-hidden="true">→</span>
           </a>
           <a
+            href="/judges"
+            className="inline-flex items-center gap-1.5 border border-[#C47D1E]/50 bg-[#C47D1E]/5 text-[#C47D1E] font-mono text-[11px] uppercase tracking-[0.15em] px-6 py-3.5 rounded-sm hover:border-[#C47D1E] hover:bg-[#C47D1E]/10 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          >
+            Judges Playground ⚖️ <span aria-hidden="true">→</span>
+          </a>
+          <a
             href="#proof"
             className="inline-flex items-center gap-1.5 border border-[#E5E5E0] text-[#1A1A18] font-mono text-[11px] uppercase tracking-[0.15em] px-6 py-3.5 rounded-sm hover:border-[#C47D1E] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
