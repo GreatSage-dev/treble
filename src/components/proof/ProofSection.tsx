@@ -84,7 +84,7 @@ export function ProofSection() {
             THE SPINE
           </span>
           <h2 className="font-serif text-[clamp(2rem,4vw,2.75rem)] leading-[1.12] tracking-[-0.02em] text-[#1A1A18]">
-            Drey-standard proof. Sub-second.
+            Deterministic proof. Sub-second.
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

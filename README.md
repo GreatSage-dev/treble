@@ -25,7 +25,7 @@ Open **[`https://treble-tawny.vercel.app/judges`](https://treble-tawny.vercel.ap
 3. **Unlicensed Contractor:** Billing > \$500 without active CSLB license $\rightarrow$ Voided under Cal. Bus. & Prof. Code § 7031.
 4. **Granberry 21-Day Forfeiture:** Notice mailed on Day 24 > 21 statutory days $\rightarrow$ Mandatory full \$2,200 deposit refund.
 
-### Path B: The Standalone Terminal Drey-Standard Receipt (< 25ms)
+### Path B: The Standalone Terminal Statutory Receipt (< 25ms)
 Execute this standalone deterministic verification command in any terminal with zero external dependencies:
 
 ```bash
@@ -198,7 +198,7 @@ A system that always finds for the tenant is a toy. TREBLE deterministically dis
 
 ## 8. QUICK START & VERIFICATION
 
-### 1. Run the Terminal Drey Receipt (< 50ms)
+### 1. Run the Terminal Statutory Receipt (< 50ms)
 ```bash
 python run_receipt.py
 ```

@@ -45,7 +45,7 @@ TREBLE was engineered specifically around the Convex "All Gas" sponsor stack:
 
 ## 3. Radical Honesty & Evaluation Note for Judges
 
-In accordance with Drey-Standard engineering and radical transparency:
+In accordance with rigorous deterministic engineering and radical transparency:
 
 | Layer | Implementation State | Verification Method |
 | :--- | :--- | :--- |
@@ -66,7 +66,7 @@ In accordance with Drey-Standard engineering and radical transparency:
    cd treble
    npm install
    ```
-2. **Run Drey-Standard Terminal Proof (< 1.0s):**
+2. **Run Deterministic Terminal Proof (< 1.0s):**
    ```bash
    python run_receipt.py
    ```
