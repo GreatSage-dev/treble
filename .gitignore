@@ -35,3 +35,9 @@ yarn-error.log*
 .DS_Store
 *.pem
 Thumbs.db
+
+# Media & Video Render Artifacts
+*.mp4
+*.mp3
+treble-video/
+vercel_home.html
