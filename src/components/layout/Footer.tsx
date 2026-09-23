@@ -61,9 +61,20 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-8 pt-6 border-t border-[#E5E5E0] flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span className="font-mono text-[12px] text-[#9C9C94]">
-            &copy; 2026 TREBLE
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-[12px] text-[#9C9C94]">
+              &copy; 2026 TREBLE
+            </span>
+            <span className="text-[#9C9C94]">&middot;</span>
+            <a
+              href="https://www.linkedin.com/in/promise-philip-324100355"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[12px] text-[#1A1A18] hover:text-[#C47D1E] underline decoration-[#E5E5E0] hover:decoration-[#C47D1E] transition-colors"
+            >
+              Built by Promise Philip (LinkedIn) &rarr;
+            </a>
+          </div>
           <span className="font-serif text-sm italic text-[#777770]">
             Made for people who got robbed.
           </span>

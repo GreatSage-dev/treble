@@ -2,8 +2,9 @@
 
 > **Event:** Convex "All Gas" Hackathon (August 25 – September 22, 2026)  
 > **Project:** TREBLE — Autonomous Statutory Tenant Deposit Defense Engine  
-> **Repository:** Public Git Repository  
-> **Live Site:** Localhost verified / Convex Cloud deployment ready  
+> **Author:** Promise Philip ([LinkedIn](https://www.linkedin.com/in/promise-philip-324100355) • [GitHub](https://github.com/GreatSage-dev))  
+> **Repository:** https://github.com/GreatSage-dev/treble  
+> **Live Site:** https://fleet-ladybug-638.convex.site (Mirror: https://treble-tawny.vercel.app)  
 > **Total Budget:** Exactly $0.00  
 
 ---

@@ -1,5 +1,6 @@
 # TREBLE: Autonomous Statutory Tenant Deposit Defense Engine
-### Convex All Gas Hackathon Grand Champion Build
+### Built for the Convex "All Gas" Hackathon 2026
+**Author:** [Promise Philip](https://www.linkedin.com/in/promise-philip-324100355) • [GitHub](https://github.com/GreatSage-dev)  
 **Stack:** Convex (Reactive State Machine & Temporal Scheduler) • Firecrawl (Entity Resolution & Web Forensics) • AgentMail (Sovereign Legal Conduits) • OpenAI (Statutory Cross-Examiner)
 
 ---
@@ -219,3 +220,14 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the live dashboard.
+
+---
+
+## 9. AUTHOR & SUBMISSION DETAILS
+
+* **Builder:** Promise Philip
+* **LinkedIn:** [https://www.linkedin.com/in/promise-philip-324100355](https://www.linkedin.com/in/promise-philip-324100355)
+* **GitHub Profile:** [@GreatSage-dev](https://github.com/GreatSage-dev)
+* **Repository:** [https://github.com/GreatSage-dev/treble](https://github.com/GreatSage-dev/treble)
+* **Live App (Convex):** [https://fleet-ladybug-638.convex.site](https://fleet-ladybug-638.convex.site)
+* **Judges Playground:** [https://fleet-ladybug-638.convex.site/judges](https://fleet-ladybug-638.convex.site/judges)
